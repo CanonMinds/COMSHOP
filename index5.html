@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<title>FIFTH ATTEMPT</title>
+          <head>
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- #CSS -->
+              <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- JS ALERT-->
+              <script type="text/javascript">
+              alert("WELCOME to the SHO-SHO-SHOPPINGLIST!!");</script>
+        <!-- JS  -->
+              <script type="text/javascript" src="script.js"></script>
+        <!-- JQUERY  -->
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <!-- GOOGLE FONTS  -->
+              <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+        <!-- BOOTSTRAP/BOOTSTABLE  -->
+              <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          </head>
+</head>
+<body>
+
+    <div class="Title" align=center>
+      <br><h1><center>WELCOME!</center></h1><br>
+    </div>
+
+
+<!--   <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div> -->
+
+</form><br>
+
+<div id="myDIV" class="header">
+
+  <h2 style="margin:5px">The SHA-SHA-SHOPPING LIST</h2>
+<div align="center">
+    <input type="text" id="myInput" placeholder="Title...">
+        <div align="center"><button onclick="newElement()" class="addbtn btn-primary center"><center>ADD ITEM to LIST</center></button></div>
+<div><br><br>
+<form align="center">
+  <div class="form-row" align="center">
+    <div class="justify-content-center align-items-center col-lg-12 center-block">
+      <label for="inputCity">ITEM</label>
+        <div class="input-group">
+          <input type="text" class="form-control text-center" id="inputCity">
+        </div>
+      </div>
+    </div><br>
+  <div class="form-row" align="center">
+    <div class="form-row justify-content-center align-items-center col-lg-4 center-block">
+      <label for="inputState">QUANTITY (Optional)</label>
+      <select id="inputState" class="form-control text-center">
+        <option selected>Choose...</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
+        <option>11</option>
+        <option>1 dozen</option>
+        <option>More than 12</option>
+      </select>
+    </div>
+    </div><br>
+    <div class="form-row" align="center">
+    <div class="form-row justify-content-center align-items-center col-lg-4 center-block">
+      <label for="inputPrice">PRICE (Optional)</label>
+      <input type="text" class="form-control text-center" id="inputZip" placeholder="P25.00, P50.00, P75.00">
+    </div>
+    </div>
+  </div><br><br>
+</div>
+  <!-- <span onclick="newElement()" class="addBtn">Add</span> -->
+</div>
+
+<ul id="myUL">
+  <li class="checked">Hit the gym</li>
+  <li>Pay bills</li>
+  <li>Meet George</li>
+</ul>
+<ul id="myUL2">
+  <li class="Total">Total</li>
+</ul>
+
+<script>
+
+// #1-------------------------------------------------------
+// "close" button key and an append to each list item
+var deletebttn = document.getElementsByTagName("LI");
+var i;
+for (i = 0; i < deletebttn.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  deletebttn[i].appendChild(span);
+}
+
+// #2-------------------------------------------------------
+// Closing button action to hide the current list item
+// Counter
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+
+// #3-------------------------------------------------------
+// Add a "checked" symbol when clicking on a list item
+var list = document.querySelector('ul'); // Counter
+list.addEventListener('click', function(ev) { //Waiting Function upon Click
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+</script>
+
+<!-- ------------------------------------------------------- -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

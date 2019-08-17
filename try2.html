@@ -1,0 +1,93 @@
+<html>
+<head>
+        <!-- #CSS -->
+              <link rel="stylesheet" type="text/css" href="try.css">
+        <!-- JS ALERT-->
+<!--               <script type="text/javascript">
+              alert("WELCOME to the SHO-SHO-SHOPPINGLIST!!");</script> -->
+        <!-- JS  -->
+              <script type="text/javascript" src="scripting2.js"></script>
+        <!-- JQUERY  -->
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <!-- GOOGLE FONTS  -->
+              <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+        <!-- BOOTSTRAP/BOOTSTABLE  -->
+              <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div align="center"><br><br><br><br>
+<h1>Sha-Shopping List Application</h1><br>
+<!-- <h3>Shopping List</h3><br> -->
+</div>
+<div align="center">
+    <input type="text" id="myInput" placeholder="Item...">
+        	<button id="btnSubmit" onclick="add_row()" class="addbtn btn-primary center"><center>ADD an Item to your List</center></button>
+        </div>
+</div><br>
+
+<div id="wrapper">
+<table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
+<tr>
+<th>Item</th>
+<th>Quantity</th>
+<th>Price</th>
+</tr>
+
+<!-- <tr id="row1">
+<td id="name_row1">Ankit</td>
+<td id="country_row1">India</td>
+<td id="age_row1">20</td>
+<td>
+<input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+<input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+<input type="button" value="Delete" class="delete" onclick="delete_row('1')">
+</td>
+</tr> -->
+
+<!-- <tr id="row2">
+<td id="name_row2">Shawn</td>
+<td id="country_row2">Canada</td>
+<td id="age_row2">26</td>
+<td>
+<input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+<input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+<input type="button" value="Delete" class="delete" onclick="delete_row('2')">
+</td>
+</tr> -->
+
+<!-- <tr id="row3">
+<td id="name_row3">Rahul</td>
+<td id="country_row3">India</td>
+<td id="age_row3">19</td>
+<td>
+<input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+<input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+<input type="button" value="Delete" class="delete" onclick="delete_row('3')">
+</td>
+</tr> -->
+
+<tr>
+<td><input type="text" id="new_inputItem"></td>
+<td><input type="number" id="new_itemQuantity"></td>
+<td><input type="number" id="new_itemPrice"></td>
+<!-- <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td> -->
+</tr>
+
+</table>
+</div>
+
+    <script>  
+        $("#myInput").keyup(function(event) { 
+            if (event.keyCode === 13) { 
+                $("#btnSubmit").click(); 
+            } 
+        }); 
+   
+        $("#btnSubmit").click(function() { 
+            // alert("Button clicked"); 
+        }); 
+    </script>  
+
+</body>
+</html>
